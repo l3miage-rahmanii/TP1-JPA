@@ -9,8 +9,8 @@ import java.util.Set;
 @Entity
 @Table(name="federation")
 public class FederationEntity {
+
     @Id
-    @Column(name = "name")
     private String name;
 
     private boolean isFageMembership;

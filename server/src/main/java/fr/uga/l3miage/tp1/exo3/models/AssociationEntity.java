@@ -19,6 +19,7 @@ public class AssociationEntity {
 
     String secretaryName;
 
+    @Enumerated(EnumType.ORDINAL)
     AssociationType associationType;
 
     @ManyToOne
