@@ -23,6 +23,5 @@ public class NetflixAccount {
     private String uuidUser;
 
     @OneToOne
-    @JoinColumn(name = "uuid_user", referencedColumnName = "uuid")
     private NetflixUserEntity netflixUserEntity;
 }
