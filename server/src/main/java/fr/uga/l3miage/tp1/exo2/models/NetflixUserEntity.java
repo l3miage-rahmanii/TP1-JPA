@@ -15,23 +15,20 @@ public class NetflixUserEntity {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "uuid", unique = true)
     private String uuid;
 
-    @Column(name = "lastname")
+
     private String lastname;
 
-    @Column(name = "firstname")
     private String firstname;
 
-    @Column(name = "sex", length = 2)
+
     @Enumerated(EnumType.STRING)
     private Sex sex;
 
-    @Column(name = "birth_date")
     private LocalDate birthDate;
 
     @OneToOne
-    private NetflixAccount netflixAccount;
+    private NetflixAccountEntity netflixAccountEntity;
 
 }

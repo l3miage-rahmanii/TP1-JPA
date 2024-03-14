@@ -8,13 +8,11 @@ import java.time.OffsetDateTime;
 public class User {
 
     @Id
-    @Column(name = "id_user")
     private Long idUser;
 
-    @Column(name = "sso")
     private boolean sso;
 
-    @Column(name = "last_connexion")
+
     private OffsetDateTime lastConnexion;
 
     @OneToOne
