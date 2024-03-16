@@ -12,7 +12,6 @@ import java.time.LocalDate;
 public class NetflixUserEntity {
 
     @Id
-    @Column(name = "id")
     private Long id;
 
     private String uuid;
@@ -28,7 +27,7 @@ public class NetflixUserEntity {
 
     private LocalDate birthDate;
 
-    @OneToOne
+    @OneToOne(mappedBy = "netflixUserEntity")
     private NetflixAccountEntity netflixAccountEntity;
 
 }

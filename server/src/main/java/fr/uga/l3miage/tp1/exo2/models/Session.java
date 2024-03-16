@@ -4,7 +4,6 @@ import javax.persistence.*;
 import java.util.UUID;
 
 @Entity
-@Table(name="session")
 public class Session {
 
     @Id
