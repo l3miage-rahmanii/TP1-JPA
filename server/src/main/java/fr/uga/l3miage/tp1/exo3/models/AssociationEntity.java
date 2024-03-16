@@ -10,22 +10,23 @@ import java.util.Set;
 public class AssociationEntity {
 
     @Id
-    @Column(name = "name")
-    String name;
+    private String name;
 
-    String presidentName;
+    @Column(nullable = false)
+    private String presidentName;
 
-    String treasurerName;
+    @Column(nullable = false)
+    private String treasurerName;
 
-    String secretaryName;
+    private String secretaryName;
 
     @Enumerated(EnumType.ORDINAL)
-    AssociationType associationType;
+    private AssociationType associationType;
 
     @ManyToOne
     @JoinColumn(foreignKey=@ForeignKey(name = "Fk_association_federation"))
-    FederationEntity federation;
+    private FederationEntity federation;
 
     @OneToMany(mappedBy = "association")
-    Set<FederationEntity> federations;
+    private Set<FederationEntity> federations;
 }
